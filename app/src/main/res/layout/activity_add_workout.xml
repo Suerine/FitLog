@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- One and only ScrollView -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_marginBottom="72dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <!-- Toolbar -->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:title="Edit Routine"
+                android:background="?attr/colorSurface"
+                app:titleTextColor="@android:color/black"
+                app:navigationIcon="@drawable/ic_arrow_back" />
+
+            <!-- Routine Name -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutRoutineName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/brown">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editRoutineName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Name" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Notes -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/layoutRoutineNotes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                app:boxBackgroundMode="outline"
+                app:boxStrokeColor="@color/brown">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editRoutineNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Pinned Notes" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Instructions -->
+            <TextView
+                android:id="@+id/labelStartMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ok let's go!"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="32dp"/>
+
+            <TextView
+                android:id="@+id/labelInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Start by adding some exercises to your routine."
+                android:textSize="16sp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Add Exercises Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddExercises"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/ic_addnew_black_24dp"
+                android:text="Add Exercises"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/brown"
+                android:layout_marginTop="32dp"
+                style="@style/Widget.Material3.Button"
+                app:iconPadding="8dp"/>
+
+            <!-- Selected Exercises List -->
+            <LinearLayout
+                android:id="@+id/selectedExercisesContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_marginTop="24dp"
+                android:background="@android:color/white"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Save FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSaveWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Save Workout"
+        app:srcCompat="@drawable/ic_check"
+        app:tint="@android:color/white"
+        app:backgroundTint="@color/brown" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

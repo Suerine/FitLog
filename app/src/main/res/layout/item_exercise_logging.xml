@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/textExerciseTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Incline Dumbbell Press"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp">
+
+            <EditText
+                android:id="@+id/inputReps"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Reps"
+                android:inputType="number"
+                android:background="@drawable/bg_input" />
+
+            <EditText
+                android:id="@+id/inputWeight"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:hint="Weight (kg)"
+                android:inputType="numberDecimal"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_input" />
+
+            <ImageButton
+                android:id="@+id/btnStartRest"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/brown"
+                android:background="@drawable/ic_timer_black_24dp"
+                android:contentDescription="Start rest timer" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/inputSetNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Notes..."
+            android:inputType="textMultiLine"
+            android:minLines="2"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

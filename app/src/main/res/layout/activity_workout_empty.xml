@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBarWorkout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorSurface"
+        android:title="New Workout"
+        android:titleTextColor="?android:textColorPrimary"
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Routine Name Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutRoutineName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Routine Name"
+        app:boxBackgroundMode="outline"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/topAppBarWorkout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editRoutineName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Notes Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/layoutRoutineNotes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Notes"
+        android:layout_marginTop="12dp"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintTop_toBottomOf="@id/layoutRoutineName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editRoutineNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="3"
+            android:inputType="textMultiLine" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Empty message -->
+    <TextView
+        android:id="@+id/textNoExercises"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="No exercises yet. Add some to get started."
+        android:textAlignment="center"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/layoutRoutineNotes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Add Exercises Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddExercises"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Exercises"
+        android:icon="@drawable/ic_addnew_black_24dp"
+
+        android:textColor="@android:color/white"
+        android:backgroundTint="@color/brown"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/textNoExercises"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
